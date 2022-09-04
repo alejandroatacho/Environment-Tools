@@ -10,5 +10,8 @@ Pick your option and watch it set up a template so you can instantly start worki
 ## To-Do List
 - [ ] add more options
 - [ ] add more languages
+- [ ] add more frameworks
+- [ ] add delete tool folder after completion if too many shell scripts are made in the future.
+- [ ] add more features
 
 
