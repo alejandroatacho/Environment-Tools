@@ -17,7 +17,7 @@ file_html() {
     #$SHELL
 }
 file_html()
-
+cd ..
 mkdir src 
 cd src 
 mkdir images
