@@ -4,7 +4,7 @@
 
 ## example
 <h4>if you run run.sh you will get a UI <br/>
-asking you if your gonna build a website or other options. <br/>
+asking you if you are gonna build a website or other options. <br/>
 Pick your option and watch it set up a template so you can instantly start working.</h4><br/>
 
 ## To-Do List
