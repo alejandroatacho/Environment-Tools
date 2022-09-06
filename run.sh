@@ -14,8 +14,8 @@ echo "
 ┈┗┛┗┛┈┗┛┗┛╭╮┈╰━━╯
 "
 
-PS3= 'Please pick your environment builder!: '
-options=("Website Builder" "Add Investors" "#" "Quit")
+PS3='Please pick your environment builder!: '
+options=("Website Builder" "Add Investors" "Odoo Builder" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -28,8 +28,11 @@ do
         response=${response,,}    # tolower
             exec python execute.py
             ;;
-        "#")
-            echo $opt
+        "Odoo Builder")
+            cd tool
+            exec ./odoo_run.sh
+            cd ..
+            #echo $opt
             # echo "you chose choice $REPLY which is $opt"
             ;;
         "Quit")
