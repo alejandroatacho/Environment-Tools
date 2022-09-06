@@ -1,5 +1,18 @@
 #!/bin/bash
 # Path: run.sh
+echo "Hello <3"
+sleep 1
+echo "
+ℊ☈ℇℊ
+┊┊┊┊╭━━╮╭━━╮┊╭━┓
+┈╭━━┫▔╲┣╯━━┻╮┃╭┛♫
+╭┫┈┈┃┈┈▏┊▋┊▋┃┃┃
+┃┃┈┈┃┈╱╭╰╯╰╯╰┫┣━╮
+╯┃┈┈╰━━╯╰━━━┳┫┣╮┃
+┈┃╭┳╭━┫╭┳╭━━╯┃┃┃┃
+┈┃┃┃┃┈┃┃┃┃┈╭╮┃╰╯┃
+┈┗┛┗┛┈┗┛┗┛╭╮┈╰━━╯
+"
 
 PS3= 'Please pick your environment builder!: '
 options=("Website Builder" "Add Investors" "#" "Quit")
