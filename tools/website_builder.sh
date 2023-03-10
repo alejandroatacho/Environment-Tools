@@ -5,7 +5,6 @@ chmod +x website_builder.sh # make the file executable by the user running the s
 cd ..
 mkdir website_folder_rename_me
 cd website_folder_rename_me
-mkdir src
 touch .gitignore
 cat > index.html <<EOF
 <!DOCTYPE html>
@@ -38,7 +37,8 @@ mkdir views
 cd views
 touch about_me.html
 cd ..
-cd src 
+mkdir src
+cd src
 mkdir images
 mkdir style
 cd style 
@@ -77,4 +77,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Windows NT
     explorer website_folder_rename_me/
+else
+  echo "Your OS is not supported!"
+  echo "so I forced it instead, hopefully it works!"
+  sleep 3
+  open " website_folder_rename_me/"
+  xdg-open " website_folder_rename_me/"
+  start " website_folder_rename_me/"
 fi

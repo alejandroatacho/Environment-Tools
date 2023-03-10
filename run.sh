@@ -15,7 +15,7 @@ echo "
 "
 
 PS3='Please pick your environment builder: '
-options=("Website Builder" "Odoo Folder Builder" "Delete Folder" "Quit")
+options=("Website Builder" "Odoo Folder Builder" "Delete Folder" "Follow Me" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -66,6 +66,15 @@ do
                     *) echo "Invalid option.";;
                 esac
             done
+            ;;
+             "Follow Me")
+            cd tools/miscellaneous
+            ./support_me.sh
+            if [ $? -eq 0 ]; then
+                echo "Thanks!"
+            else
+                echo "I failed you!."
+            fi
             ;;
         "Quit")
             break
