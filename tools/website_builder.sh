@@ -5,6 +5,7 @@ chmod +x website_builder.sh # make the file executable by the user running the s
 cd ..
 mkdir website_folder_rename_me
 cd website_folder_rename_me
+mkdir src
 touch .gitignore
 cat > index.html <<EOF
 <!DOCTYPE html>
