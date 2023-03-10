@@ -22,7 +22,7 @@ cat > index.html <<EOF
     <p> Hello front page with nothing on it <3
     </p>
     <div>
-        <button onclick="showAlert()">Show Alert </button>
+        <button onclick="showAlert()"> Show Alert </button>
 
     </div>
 
@@ -37,11 +37,9 @@ mkdir views
 cd views
 touch about_me.html
 cd ..
-mkdir src 
 cd src 
 mkdir images
 mkdir style
-sleep 1
 cd style 
 cat > style.css <<EOF
 .container {
@@ -60,7 +58,7 @@ button {
     margin-top: 20px;
 }
 EOF
-cd ..
+cd ../
 mkdir js
 cd js
 cat > script.js << EOF
@@ -68,9 +66,14 @@ function showAlert() {
     alert("This is an alert message!");
 }
 EOF
-cd ..
-
-mkdir script
-
-# $SHELL #prevent it from closing
-exit
+cd ../..
+if [ "$(uname)" == "Darwin" ]; then
+    # macOS
+    open website_folder_rename_me/
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    # Linux
+    xdg-open website_folder_rename_me/
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    # Windows NT
+    explorer website_folder_rename_me/
+fi
