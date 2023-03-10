@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Delete folder
+cd .. 
 cd ..
 echo "Deleting folders..."
 sleep 1

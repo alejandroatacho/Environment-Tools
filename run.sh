@@ -1,6 +1,6 @@
 #!/bin/bash
 # Path: run.sh
-echo "Hello <3"
+echo "Hello, $(whoami) <3, $(hostname)"
 sleep 1
 echo "
 ℊ☈ℇℊ

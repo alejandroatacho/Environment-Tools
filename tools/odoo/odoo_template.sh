@@ -1,6 +1,7 @@
 
 #!/bin/bash
 # make odoo v14 folders to start
+cd .. 
 cd ..
 mkdir odoo_module_rename_me
 cd odoo_module_rename_me
