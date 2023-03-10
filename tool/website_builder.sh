@@ -18,10 +18,16 @@ cat > index.html <<EOF
 <body>
 
 <div class="container" style="justify-content:center;text-align:center;color:black;">
-<p> Hello front page with nothing on it <3
+    <p> Hello front page with nothing on it <3
+    </p>
+    <div>
+        <button onclick="showAlert()">Show Alert </button>
+
+    </div>
+
 </div>
 
- <script src="script.js" type="text/javascript"></script>  
+ <script src="src/js/script.js" type="text/javascript"></script>  
 </body>
 
 </html>
@@ -38,15 +44,34 @@ mkdir images
 mkdir style
 sleep 1
 cd style 
-touch style.{css,scss}
-printf "body {\n    background-color: white;\n}\n" > style.css
-printf "body {\n    background-color: white;\n}\n" > style.scss
+cat > style.css <<EOF
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+EOF
 cd ..
 mkdir js
 cd js
-touch script.js
+cat > script.js << EOF
+function showAlert() {
+    alert("This is an alert message!");
+}
+EOF
 cd ..
+
 mkdir script
+
 # echo "console.log('Hello World');" >> script.js
 
 # $SHELL #prevent it from closing
