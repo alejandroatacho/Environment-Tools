@@ -20,7 +20,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Website Builder")
-            cd tool
+            cd tools
             exec ./website_builder.sh
             ;;
         "Add Investors")
@@ -29,7 +29,7 @@ do
             exec python execute.py
             ;;
         "Odoo Builder")
-            cd tool
+            cd tools
             exec ./odoo_run.sh
             cd ..
             #echo $opt
