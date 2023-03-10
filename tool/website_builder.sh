@@ -12,26 +12,20 @@ cat > index.html <<EOF
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="src/style/style.css" type="text/css">
+    <title>website_name</title>
 </head>
 <body>
-    
+
+<div class="container" style="justify-content:center;text-align:center;color:black;">
+<p> Hello front page with nothing on it <3
+</div>
+
+ <script src="script.js" type="text/javascript"></script>  
 </body>
+
 </html>
 EOF
-# touch index.html
-# printf "<!DOCTYPE html>
-# <html lang="en">
-# <head>
-#     <meta charset="UTF-8">
-#     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-#     <title>Document</title>
-# </head>
-# <body>
-    
-# </body>
-# </html>" > index.html
 mkdir views
 cd views
 touch about_me.html
@@ -45,8 +39,8 @@ mkdir style
 sleep 1
 cd style 
 touch style.{css,scss}
-printf "body {\n    background-color: #000000;\n}\n" > style.css
-printf "body {\n    background-color: #000000;\n}\n" > style.scss
+printf "body {\n    background-color: white;\n}\n" > style.css
+printf "body {\n    background-color: white;\n}\n" > style.scss
 cd ..
 mkdir js
 cd js
