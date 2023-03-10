@@ -1,5 +1,7 @@
 #!/bin/bash
-
+cd ..
+mkdir odoo_module_rename_me
+cd odoo_module_rename_me
 mkdir models
 touch models/__init__.py
 mkdir controllers
