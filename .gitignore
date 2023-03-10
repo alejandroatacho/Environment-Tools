@@ -1,5 +1,3 @@
-tools/test
 website_folder_rename_me
 odoo_module_rename_me
-test/login.sh
-run_old.sh
+test/*
