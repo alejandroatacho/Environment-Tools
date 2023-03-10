@@ -5,6 +5,7 @@ chmod +x website_builder.sh # make the file executable by the user running the s
 
 mkdir website_folder_rename_me
 cd website_folder_rename_me
+touch .gitignore
 cat > index.html <<EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +36,6 @@ EOF
 mkdir views
 cd views
 touch about_me.html
-# echo "<!DOCTYPE html>
-# <html lang="en">
 cd ..
 mkdir src 
 cd src 
@@ -49,6 +48,7 @@ cat > style.css <<EOF
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color:antiquewhite;
 }
 
 button {
@@ -71,8 +71,6 @@ EOF
 cd ..
 
 mkdir script
-
-# echo "console.log('Hello World');" >> script.js
 
 # $SHELL #prevent it from closing
 exit
