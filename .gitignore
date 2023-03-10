@@ -1,3 +1,4 @@
 tools/test
 tools/website_folder_rename_me
 test/login.sh
+.gitattributes
