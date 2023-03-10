@@ -1,6 +1,6 @@
 #!/bin/bash
 #path:/home/tool.sh
-echo "hello tizania <3"
+echo "Making the files!"
 chmod +x website_builder.sh # make the file executable by the user running the script with admin privileges
 
 cd ..
