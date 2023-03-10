@@ -2,7 +2,7 @@
 #path:/home/tool.sh
 echo "Making the files!"
 chmod +x website_builder.sh # make the file executable by the user running the script with admin privileges
-
+cd ..
 mkdir website_folder_rename_me
 cd website_folder_rename_me
 touch .gitignore

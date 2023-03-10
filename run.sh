@@ -15,18 +15,19 @@ echo "
 "
 
 PS3='Please pick your environment builder!: '
-options=("Website Builder" "Add Investors" "Odoo Builder" "Quit")
+options=("Website Builder" "Odoo Builder" "Delete Folder" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
         "Website Builder")
             cd tools
             exec ./website_builder.sh
+            sleep 1
+            open website_folder_rename_me/
             ;;
-        "Add Investors")
-        read -r -p "Press any key to continue!: " response
-        response=${response,,}    # tolower
-            exec python execute.py
+        "Delete Folder")
+            cd tools
+            exec ./auto_delete.sh
             ;;
         "Odoo Builder")
             cd tools
