@@ -20,7 +20,7 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Website Builder")
-            cd tools
+            cd tools/websites
             ./website_builder.sh
             if [ $? -eq 0 ]; then
                 echo "Website builder completed successfully."
@@ -29,7 +29,7 @@ do
             fi
             ;;
         "Delete Folder")
-            cd tools
+            cd tools/scripts
             ./auto_delete.sh
             if [ $? -eq 0 ]; then
                 echo "Folders deleted successfully."
@@ -68,7 +68,7 @@ do
             done
             ;;
              "Follow Me")
-            cd tools/miscellaneous
+            cd tools/scripts
             ./support_me.sh
             if [ $? -eq 0 ]; then
                 echo "Thanks!"
