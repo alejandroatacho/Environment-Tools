@@ -1,4 +1,5 @@
 #!/bin/bash
+# make odoo v14 folders to start
 cd ..
 mkdir odoo_module_rename_me
 cd odoo_module_rename_me
@@ -15,3 +16,4 @@ mkdir report
 mkdir data
 mkdir demo
 mkdir i18n
+

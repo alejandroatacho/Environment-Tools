@@ -15,7 +15,7 @@ echo "
 "
 
 PS3='Please pick your environment builder: '
-options=("Website Builder" "Odoo Builder" "Delete Folder" "Quit")
+options=("Website Builder" "Odoo Folder Builder" "Delete Folder" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -37,14 +37,35 @@ do
                 echo "Failed to delete folders."
             fi
             ;;
-        "Odoo Builder")
-            cd tools
-            ./odoo_run.sh
-            if [ $? -eq 0 ]; then
-                echo "Odoo builder completed successfully."
-            else
-                echo "Odoo builder failed."
-            fi
+        "Odoo Folder Builder")
+            PS3='Please pick your Odoo version: '
+            options=("Odoo v14" "Odoo v16")
+            select odoo_version in "${options[@]}"
+            do
+                case $odoo_version in
+                    "Odoo v14")
+                        cd tools
+                        ./odoo_clean_run.sh
+                        if [ $? -eq 0 ]; then
+                            echo "Odoo v14 folder builder completed successfully."
+                        else
+                            echo "Odoo v14 folder builder failed."
+                        fi
+                        break
+                        ;;
+                    "Odoo v16")
+                        cd tools
+                        ./odoo_run.sh
+                        if [ $? -eq 0 ]; then
+                            echo "Odoo v16 folder builder completed successfully."
+                        else
+                            echo "Odoo v16 folder builder failed."
+                        fi
+                        break
+                        ;;
+                    *) echo "Invalid option.";;
+                esac
+            done
             ;;
         "Quit")
             break
