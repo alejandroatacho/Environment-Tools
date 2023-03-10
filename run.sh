@@ -44,8 +44,8 @@ do
             do
                 case $odoo_version in
                     "Odoo v14")
-                        cd tools
-                        ./odoo_clean_run.sh
+                        cd tools/odoo
+                        ./odoo_v14.sh
                         if [ $? -eq 0 ]; then
                             echo "Odoo v14 folder builder completed successfully."
                         else
@@ -54,8 +54,8 @@ do
                         break
                         ;;
                     "Odoo v16")
-                        cd tools
-                        ./odoo_run.sh
+                        cd tools/odoo
+                        ./odoo_template.sh
                         if [ $? -eq 0 ]; then
                             echo "Odoo v16 folder builder completed successfully."
                         else
