@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# make odoo v14 folders to start
+# make odoo template without bin scaffold command
 cd ..
 cd ..
 if [ ! -d "odoo_module_rename_me" ]; then
