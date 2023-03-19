@@ -20,9 +20,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 sh_files=(
   "tools/websites/website_builder.sh"
   "tools/scripts/auto_delete.sh"
-  "tools/odoo/odoo_v14.sh"
   "tools/odoo/odoo_template.sh"
-  "tools/scripts/support_me.sh"
   "tools/scripts/delete_sass.sh"
   "tools/scripts/code_counter.sh"
 )
@@ -34,7 +32,7 @@ py_files=(
 
 options=("${sh_files[@]}" "${py_files[@]}" "Quit")
 
-PS3='Please pick a script to run: '
+PS3='Please pick a script number to run: '
 select opt in "${options[@]}"
 do
     if [ "$opt" = "Quit" ]; then
