@@ -14,71 +14,47 @@ echo "
 ┈┗┛┗┛┈┗┛┗┛╭╮┈╰━━╯
 "
 
-PS3='Please pick your environment builder: '
-options=("Website Builder" "Odoo Folder Builder" "Delete Folder" "Follow Me" "Quit")
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+sh_files=(
+  "tools/websites/website_builder.sh"
+  "tools/scripts/auto_delete.sh"
+  "tools/odoo/odoo_v14.sh"
+  "tools/odoo/odoo_template.sh"
+  "tools/scripts/support_me.sh"
+  "tools/scripts/delete_sass.sh"
+  "tools/scripts/code_counter.sh"
+)
+
+py_files=(
+  "tools/scripts/hunt_my_xml_path.py"
+  "tools/scripts/tree_viewer_xml.py"
+)
+
+options=("${sh_files[@]}" "${py_files[@]}" "Quit")
+
+PS3='Please pick a script to run: '
 select opt in "${options[@]}"
 do
-    case $opt in
-        "Website Builder")
-            cd tools/websites
-            ./website_builder.sh
-            if [ $? -eq 0 ]; then
-                echo "Website builder completed successfully."
-            else
-                echo "Website builder failed."
-            fi
-            ;;
-        "Delete Folder")
-            cd tools/scripts
-            ./auto_delete.sh
-            if [ $? -eq 0 ]; then
-                echo "Folders deleted successfully."
-            else
-                echo "Failed to delete folders."
-            fi
-            ;;
-        "Odoo Folder Builder")
-            PS3='Please pick your Odoo version: '
-            options=("Odoo v14" "Odoo v16")
-            select odoo_version in "${options[@]}"
-            do
-                case $odoo_version in
-                    "Odoo v14")
-                        cd tools/odoo
-                        ./odoo_v14.sh
-                        if [ $? -eq 0 ]; then
-                            echo "Odoo v14 folder builder completed successfully."
-                        else
-                            echo "Odoo v14 folder builder failed."
-                        fi
-                        break
-                        ;;
-                    "Odoo v16")
-                        cd tools/odoo
-                        ./odoo_template.sh
-                        if [ $? -eq 0 ]; then
-                            echo "Odoo v16 folder builder completed successfully."
-                        else
-                            echo "Odoo v16 folder builder failed."
-                        fi
-                        break
-                        ;;
-                    *) echo "Invalid option.";;
-                esac
-            done
-            ;;
-             "Follow Me")
-            cd tools/scripts
-            ./support_me.sh
-            if [ $? -eq 0 ]; then
-                echo "Thanks!"
-            else
-                echo "I failed you!."
-            fi
-            ;;
-        "Quit")
-            break
-            ;;
-        *) echo "Invalid option.";;
-    esac
+    if [ "$opt" = "Quit" ]; then
+        break
+    fi
+
+    if [[ " ${sh_files[*]} " == *" ${opt} "* ]]; then
+        "${SCRIPT_DIR}/${opt}"
+        status=$?
+    elif [[ " ${py_files[*]} " == *" ${opt} "* ]]; then
+        python3 "${SCRIPT_DIR}/${opt}"
+        status=$?
+    else
+        echo "Invalid option."
+        continue
+    fi
+
+    if [ $status -eq 0 ]; then
+        echo "${opt} completed successfully."
+    else
+        echo "${opt} failed."
+    fi
 done
