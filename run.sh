@@ -1,6 +1,7 @@
 #!/bin/bash
 # Path: run.sh
 echo "Hello, $(whoami) <3, $(hostname)"
+echo "Welcome to my personal scripts"
 sleep 1
 echo "
 ℊ☈ℇℊ
