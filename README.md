@@ -1,13 +1,18 @@
 # How to use
 
-Use this shell script to set up your programming environment.
-<br/>
-Drop this entire folder into your project folder, along with the .gitignore (read the .gitignore).
-<br/>
-Simply `open run.sh` or use `./run.sh` in your terminal /cmd / gitbash and choose a number in the UI.
-<br/>
-When you run `run.sh`, it prompts you to select an option from the UI. Depending on your choice, the corresponding shell script or Python script is executed.
-<br/>
+Follow these steps to set up and use the programming environment:
+
+1. **Place the folder in your project**: Drop the entire folder containing the shell scripts and Python scripts into your project folder, along with the .gitignore file (make sure to read the .gitignore).
+
+2. **Run the main script**: Open your terminal, cmd, or gitbash, navigate to the folder containing the scripts, and then either type `open run.sh` or `./run.sh` and press Enter.
+
+3. **Choose a script to run**: The UI will display a list of available scripts. Each script has a number associated with it. Enter the number corresponding to the script you want to execute, and press Enter.
+
+4. **Wait for the script to complete**: Depending on your choice, the corresponding shell script or Python script is executed. Wait for the script to finish its task.
+
+5. **Review the results**: Check the output of the script and ensure that it completed successfully. If necessary, review any generated files or make adjustments to the script and rerun it.
+
+Remember that you can always run `run.sh` again to choose a different script or run the same script with different options.
 
 # Optional
 
