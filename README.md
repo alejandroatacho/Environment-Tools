@@ -31,3 +31,5 @@ Pick your option and watch it set up a template so you can instantly start worki
 - [ ] Add more frameworks
 - [ ] Add delete tool folder after completion if too many shell scripts are made in the future.
 - [ ] Add more features
+
+![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
