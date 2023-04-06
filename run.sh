@@ -1,9 +1,9 @@
 #!/bin/bash
 # Path: run.sh
-printf "Hello, %s <3, %s\nDate: %s\nCurrent Dir: %s\nOS: %s\n" "$(whoami)" "$(hostname)" "$(date)" "$(pwd)" "$(uname -s)"
-printf "=============================================\n"
-printf "    Welcome to My Personal Scripts\n"
-printf "=============================================\n"
+printf "\033[1;32mHello, %s <3, %s\nDate: %s\nCurrent Dir: %s\nOS: %s\n\033[0m" "$(whoami)" "$(hostname)" "$(date)" "$(pwd)" "$(uname -s)"
+printf "\033[1;34m=============================================\n\033[0m"
+printf "\033[1;34m    Welcome to My Personal Scripts\n\033[0m"
+printf "\033[1;34m=============================================\n\033[0m"
 
 printf "Please ensure you have installed the required packages with (optional):\n"
 printf "\033[1;36m%s\033[0m\n\n" "pip install -r requirements.txt"
@@ -11,7 +11,6 @@ sleep 1
 printf "\033[1;33m%s\033[0m\n" "============================================="
 printf "\033[1;33m%-25s %s\033[0m\n" "UI: Pick a number"
 printf "\033[1;33m%s\033[0m\n" "============================================="
-
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
@@ -50,8 +49,8 @@ do
     fi
 
     if [ $status -eq 0 ]; then
-        echo "${opt} completed successfully."
+        printf "\033[1;32m%s completed successfully.\033[0m\n" "${opt}"
     else
-        echo "${opt} failed."
+        printf "\033[1;31m%s failed.\033[0m\n" "${opt}"
     fi
 done
