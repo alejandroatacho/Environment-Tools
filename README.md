@@ -1,3 +1,5 @@
+# Table Of Index
+
 - [How to use](#how-to-use)
   - [Place the folder in your project](#1-place-the-folder-in-your-project)
   - [Run the main script](#2-run-the-main-script)
