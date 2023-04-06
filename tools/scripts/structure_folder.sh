@@ -4,7 +4,7 @@
 path="./"
 
 # Name of the file to save the output to
-file="folder_structure.txt"
+file="tools/data/folder_structure.txt"
 
 # Delete the file if it already exists
 if [ -f $file ]; then

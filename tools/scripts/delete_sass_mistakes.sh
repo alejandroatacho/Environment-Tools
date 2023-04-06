@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Move to the parent directory
-cd ..
+cd ./
 
 # Greeting message
 echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"

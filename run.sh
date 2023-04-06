@@ -1,20 +1,17 @@
 #!/bin/bash
 # Path: run.sh
-echo "Hello, $(whoami) <3, $(hostname)"
-echo "Welcome to my personal scripts"
+printf "Hello, %s <3, %s\nDate: %s\nCurrent Dir: %s\nOS: %s\n" "$(whoami)" "$(hostname)" "$(date)" "$(pwd)" "$(uname -s)"
+printf "=============================================\n"
+printf "    Welcome to My Personal Scripts\n"
+printf "=============================================\n"
+
+printf "Please ensure you have installed the required packages with (optional):\n"
+printf "\033[1;36m%s\033[0m\n\n" "pip install -r requirements.txt"
 sleep 1
-echo "
-ℊ☈ℇℊ
-┊┊┊┊╭━━╮╭━━╮┊╭━┓
-┈╭━━┫▔╲┣╯━━┻╮┃╭┛♫
-╭┫┈┈┃┈┈▏┊▋┊▋┃┃┃
-┃┃┈┈┃┈╱╭╰╯╰╯╰┫┣━╮
-╯┃┈┈╰━━╯╰━━━┳┫┣╮┃
-┈┃╭┳╭━┫╭┳╭━━╯┃┃┃┃
-┈┃┃┃┃┈┃┃┃┃┈╭╮┃╰╯┃
-┈┗┛┗┛┈┗┛┗┛╭╮┈╰━━╯
-"
-echo "Keep in mind my python scripts won't work if you don't "pip install -r requirements.txt""
+printf "\033[1;33m%s\033[0m\n" "============================================="
+printf "\033[1;33m%-25s %s\033[0m\n" "UI: Pick a number"
+printf "\033[1;33m%s\033[0m\n" "============================================="
+
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
@@ -22,8 +19,9 @@ sh_files=(
   "tools/websites/website_builder.sh"
   "tools/scripts/auto_delete.sh"
   "tools/odoo/odoo_template.sh"
-  "tools/scripts/delete_sass.sh"
+  "tools/scripts/delete_sass_mistakes.sh"
   "tools/scripts/code_counter.sh"
+  "tools/scripts/structure_folder.sh"
 )
 
 py_files=(

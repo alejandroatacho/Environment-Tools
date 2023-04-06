@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 
 # Initialize associative array for file extensions and line counts
 declare -A line_counts=( ["scss"]=0 ["css"]=0 ["js"]=0 ["html"]=0 ["php"]=0 ["py"]=0 ["sh"]=0 ["xml"]=0 ["xslt"]=0 )
@@ -13,7 +12,7 @@ while IFS= read -r -d '' file; do
 done < <(find . -type f \( -name "*.scss" -o -name "*.css" -o -name "*.js" -o -name "*.html" -o -name "*.php" -o -name "*.py" -o -name "*.sh" -o -name "*.xml" -o -name "*.xslt" \) -print0)
 
 output_file="code_line_count.txt"
-cd data
+cd tools/data
 
 # Remove the output file if it exists
 [ -f "$output_file" ] && rm "$output_file"
