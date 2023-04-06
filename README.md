@@ -1,3 +1,13 @@
+- [How to use](#how-to-use)
+  - [Place the folder in your project](#place-the-folder-in-your-project)
+  - [Run the main script](#run-the-main-script)
+  - [Choose a script to run](#choose-a-script-to-run)
+  - [Wait for the script to complete](#wait-for-the-script-to-complete)
+  - [Review the results](#review-the-results)
+- [Optional](#optional)
+- [Features](#features)
+- [To-Do List](#to-do-list)
+
 # How to use
 
 Follow these steps to set up and use the programming environment:
