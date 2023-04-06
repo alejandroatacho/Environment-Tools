@@ -1,9 +1,9 @@
 - [How to use](#how-to-use)
-  - [Place the folder in your project](#place-the-folder-in-your-project)
-  - [Run the main script](#run-the-main-script)
-  - [Choose a script to run](#choose-a-script-to-run)
-  - [Wait for the script to complete](#wait-for-the-script-to-complete)
-  - [Review the results](#review-the-results)
+  - [Place the folder in your project](#1-place-the-folder-in-your-project)
+  - [Run the main script](#2-run-the-main-script)
+  - [Choose a script to run](#3-choose-a-script-to-run)
+  - [Wait for the script to complete](#4-wait-for-the-script-to-complete)
+  - [Review the results](#5-review-the-results)
 - [Optional](#optional)
 - [Features](#features)
 - [To-Do List](#to-do-list)
@@ -12,15 +12,25 @@
 
 Follow these steps to set up and use the programming environment:
 
-1. **Place the folder in your project**: Drop the entire folder containing the shell scripts and Python scripts into your project folder, along with the .gitignore file (make sure to read the .gitignore).
+### 1. Place the folder in your project
 
-2. **Run the main script**: Open your terminal, cmd, or gitbash, navigate to the folder containing the scripts, and then either type `open run.sh` or `./run.sh` and press Enter.
+Drop the entire folder containing the shell scripts and Python scripts into your project folder, along with the .gitignore file (make sure to read the .gitignore).
 
-3. **Choose a script to run**: The UI will display a list of available scripts. Each script has a number associated with it. Enter the number corresponding to the script you want to execute, and press Enter.
+### 2. Run the main script
 
-4. **Wait for the script to complete**: Depending on your choice, the corresponding shell script or Python script is executed. Wait for the script to finish its task.
+Open your terminal, cmd, or gitbash, navigate to the folder containing the scripts, and then either type `open run.sh` or `./run.sh` and press Enter.
 
-5. **Review the results**: Check the output of the script and ensure that it completed successfully. If necessary, review any generated files or make adjustments to the script and rerun it.
+### 3. Choose a script to run
+
+The UI will display a list of available scripts. Each script has a number associated with it. Enter the number corresponding to the script you want to execute, and press Enter.
+
+### 4. Wait for the script to complete
+
+Depending on your choice, the corresponding shell script or Python script is executed. Wait for the script to finish its task.
+
+### 5. Review the results
+
+Check the output of the script and ensure that it completed successfully. If necessary, review any generated files or make adjustments to the script and rerun it.
 
 Remember that you can always run `run.sh` again to choose a different script or run the same script with different options.
 
