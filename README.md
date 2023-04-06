@@ -9,8 +9,6 @@ When you run `run.sh`, it prompts you to select an option from the UI. Depending
 <br/>
  To install the libraries if you want to use the python scripts too (in your terminal if you have python on your system).
 
-![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
-
 ## Features
 
 - Builds a website template
@@ -23,9 +21,9 @@ When you run `run.sh`, it prompts you to select an option from the UI. Depending
 
 ### To-Do List
 
-- [ ] Add more options
-- [ ] Add more languages
-- [ ] Add more frameworks
-- [ ] Add delete tool folder after completion if too many shell scripts are made in the future.
+- [ ] Add more Languages & Options
+- [ ] Add more Frameworks with templates created.
+- [ ] Add delete tool folder after completion of project if too many shell scripts are made in the future.
 
 
+![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
