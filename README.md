@@ -3,10 +3,10 @@ Use this shell script to setup your programming environment.Drop this whole fold
 <br/>
 Just open run.sh or use ./run.sh in terminal and pick a number in the UI
 When you run `run.sh`, it prompts you to select an option from the UI. Depending on the option you choose, the corresponding shell script or Python script is executed.
-<p>`pip install -r requirements.txt`
+`pip install -r requirements.txt`
 <br/>
  To install the libraries if you want to use the python scripts too (in your terminal if you have python on your system).
-</p>
+
 
 
 ## Features
