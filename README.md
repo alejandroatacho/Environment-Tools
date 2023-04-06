@@ -1,8 +1,12 @@
 # How to use
 
-Use this shell script to set up your programming environment. Drop this entire folder into your project folder, along with the .gitignore (read the .gitignore).
+Use this shell script to set up your programming environment.
 <br/>
-Simply open run.sh or use ./run.sh in the terminal and choose a number in the UI. When you run `run.sh`, it prompts you to select an option from the UI. Depending on your choice, the corresponding shell script or Python script is executed.
+Drop this entire folder into your project folder, along with the .gitignore (read the .gitignore).
+<br/>
+Simply `open run.sh` or use `./run.sh` in your terminal /cmd / gitbash and choose a number in the UI.
+<br/>
+When you run `run.sh`, it prompts you to select an option from the UI. Depending on your choice, the corresponding shell script or Python script is executed.
 <br/>
 
 # Optional
