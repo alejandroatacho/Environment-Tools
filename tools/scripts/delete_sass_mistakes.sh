@@ -4,7 +4,6 @@
 cd ./
 
 # Greeting message
-echo "Hello Cutie _(:3」∠)_ , $(whoami), $(hostname)"
 echo "Deleting my SASS compiler mistakes!"
 sleep 1
 
