@@ -9,7 +9,7 @@ When you run `run.sh`, it prompts you to select an option from the UI. Depending
 <br/>
  To install the libraries if you want to use the python scripts too (in your terminal if you have python on your system).
 
-
+![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
 
 ## Features
 
@@ -21,17 +21,11 @@ When you run `run.sh`, it prompts you to select an option from the UI. Depending
 - Searches for specified text in XML files
 - Visualizes the structure of an XML file (Tree Viewer)
 
-### Example
-
-If you run run.sh you will get a UI asking you if you're going to build a website or other options.
-Pick your option and watch it set up a template so you can instantly start working.
-
 ### To-Do List
 
 - [ ] Add more options
 - [ ] Add more languages
 - [ ] Add more frameworks
 - [ ] Add delete tool folder after completion if too many shell scripts are made in the future.
-- [ ] Add more features
 
-![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
+
