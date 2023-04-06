@@ -1,8 +1,7 @@
 website_folder_rename_me
 odoo_module_rename_me
-folder_structure.txt
 
-# Uncomment below when your using in your own personal project 
+# Uncomment below when your using in your own personal project, you can also delete the README.md and replace it with yours
 # /tools
 # run.sh
 # /img_for_github

@@ -1,0 +1,58 @@
+Folder structure of ./
+=========================
+.//img_for_github
+|-- img_for_github/
+.//img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg
+|-- Akko_Kagari_Classic_Shell_Scripting.jpg
+.//README.md
+|-- README.md
+.//requirements.txt
+|-- requirements.txt
+.//run.sh
+|-- run.sh
+.//run2.sh
+|-- run2.sh
+.//tools
+|-- tools/
+.//tools/data
+|-- data/
+.//tools/data/code_line_count.txt
+|-- code_line_count.txt
+.//tools/data/folder_structure.txt
+|-- folder_structure.txt
+.//tools/odoo
+|-- odoo/
+.//tools/odoo/odoo_template.sh
+|-- odoo_template.sh
+.//tools/scripts
+|-- scripts/
+.//tools/scripts/auto_delete.sh
+|-- auto_delete.sh
+.//tools/scripts/code_counter.sh
+|-- code_counter.sh
+.//tools/scripts/delete_sass_mistakes.sh
+|-- delete_sass_mistakes.sh
+.//tools/scripts/hunt_my_xml_path.py
+|-- hunt_my_xml_path.py
+.//tools/scripts/structure_folder.sh
+|-- structure_folder.sh
+.//tools/scripts/tree_viewer_xml.py
+|-- tree_viewer_xml.py
+.//tools/test
+|-- test/
+.//tools/test/code_counter_old.sh
+|-- code_counter_old.sh
+.//tools/test/odoo_v14.sh
+|-- odoo_v14.sh
+.//tools/test/README.md
+|-- README.md
+.//tools/test/run_old.sh
+|-- run_old.sh
+.//tools/test/support_me.sh
+|-- support_me.sh
+.//tools/websites
+|-- websites/
+.//tools/websites/root.scss
+|-- root.scss
+.//tools/websites/website_builder.sh
+|-- website_builder.sh
