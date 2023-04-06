@@ -14,7 +14,7 @@ Follow these steps to set up and use the programming environment:
 
 ### 1. Place the folder in your project
 
-Drop the entire folder containing the shell scripts and Python scripts into your project folder, along with the .gitignore file (make sure to read the .gitignore).
+Drop the entire folder containing the shell scripts and Python scripts into your project folder, along with the `.gitignore` file (make sure to read the `.gitignore`).
 
 ### 2. Run the main script
 
