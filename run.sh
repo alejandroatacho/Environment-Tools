@@ -14,7 +14,7 @@ echo "
 ┈┃┃┃┃┈┃┃┃┃┈╭╮┃╰╯┃
 ┈┗┛┗┛┈┗┛┗┛╭╮┈╰━━╯
 "
-
+echo "Keep in mind my python scripts won't work if you don't "pip install -r requirements.txt""
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 

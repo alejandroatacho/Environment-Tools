@@ -1,0 +1,5 @@
+xml.etree.ElementTree
+tk
+
+# pip install -r requirements.txt
+# To install the libraries if you want to use the python scripts too.
