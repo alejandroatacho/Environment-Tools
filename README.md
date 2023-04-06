@@ -13,19 +13,19 @@ To install the libraries if you want to use the Python scripts as well (in your 
 
 ## Features
 
-- Builds a website template
-- Automatically deletes specified files or directories
-- Sets up an Odoo project template
-- Deletes all Sass file output (CSS) in a directory except for styles.css (you can customize it as needed)
-- Counts the number of lines of code in a directory
-- Searches for specified text in XML files
-- Visualizes the structure of an XML file (Tree Viewer)
+- Builds a website template.
+- Automatically deletes specified files or directories made by these scripts.
+- Sets up an Odoo project template.
+- Deletes all Sass file output (CSS) in a directory except for styles.css (you can customize it as needed).
+- Counts the number of lines of code in a directory.
+- Searches for specified text in XML files.
+- Visualizes the structure of an XML file (Tree Viewer).
 
 ### To-Do List
 
 - [ ] Make the code_counter not count the tools folder.
-- [ ] Add more languages & options
-- [ ] Add more frameworks with pre-built templates
+- [ ] Add more languages & options.
+- [ ] Add more frameworks with pre-built templates.
 - [ ] Add delete tool folder after project completion if too many shell scripts are created in the future.
 
 ![alt text](/img_for_github/Akko_Kagari_Classic_Shell_Scripting.jpg)
