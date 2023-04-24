@@ -1,0 +1,44 @@
+// Alejandro Atacho from SMART-obc Codes are below this line.
+// __________________________________________________________
+// https://github.com/alejandroatacho
+// If any issues arises or fixes are need read the comments below to find out which selectors are which.
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == extra_small_mobile {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if $breakpoint == small_mobile {
+    @media (min-width: 321px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet_portrait {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet_landscape {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop_small {
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop_medium {
+    @media (min-width: 1367px) and (max-width: 1599px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop_large {
+    @media (min-width: 1600px) and (max-width: 1920px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1921px) {
+      @content;
+    }
+  }
+}
