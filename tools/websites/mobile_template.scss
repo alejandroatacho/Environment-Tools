@@ -3,6 +3,11 @@
 // https://github.com/alejandroatacho
 // If any issues arises or fixes are need read the comments below to find out which selectors are which.
 
+// Alejandro Atacho from SMART-obc Codes are below this line.
+// __________________________________________________________
+// https://github.com/alejandroatacho
+// If any issues arises or fixes are need read the comments below to find out which selectors are which.
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == extra_small_mobile {
     @media (max-width: 320px) {
@@ -14,6 +19,19 @@
     }
   } @else if $breakpoint == mobile {
     @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+    
+  } @else if $breakpoint == iphone_6_7_8 {
+    @media (min-width: 375px) and (max-width: 667px) {
+      @content;
+    }
+  } @else if $breakpoint == iphone_x {
+    @media (min-width: 375px) and (max-width: 812px) {
+      @content;
+    }
+  } @else if $breakpoint == ipad {
+    @media (min-width: 768px) and (max-width: 1024px) {
       @content;
     }
   } @else if $breakpoint == tablet_portrait {
@@ -37,7 +55,15 @@
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media (min-width: 1921px) {
+    @media (min-width: 1921px) and (max-width: 2560px) {
+      @content;
+    }
+  } @else if $breakpoint == large_desktop {
+    @media (min-width: 2561px) and (max-width: 3440px) {
+      @content;
+    }
+  } @else if $breakpoint == ultra_wide {
+    @media (min-width: 3441px) {
       @content;
     }
   }
