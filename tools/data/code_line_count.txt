@@ -1,15 +1,15 @@
 All code lines in your project:
 
-Total TXT lines: 74
-Total SCSS lines: 159
+Total TXT lines: 78
+Total SCSS lines: 234
 Total PY lines: 52
 Total SH lines: 598
-Total MD lines: 61
+Total MD lines: 130
 
 All code sizes in your project
 
 Total TXT size: 6KB
-Total SCSS size: 8KB
+Total SCSS size: 12KB
 Total PY size: 5KB
 Total SH size: 38KB
-Total MD size: 11KB
+Total MD size: 15KB
