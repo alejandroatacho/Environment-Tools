@@ -1,3 +1,6 @@
+import json
+from dicttoxml import dicttoxml
+from xml.dom.minidom import parseString
 """ @Hinamizawa
 This module provides utility functions to load, format, and convert JSON data to XML.
 
@@ -16,15 +19,6 @@ Functions:
     write_to_file(file_path, content): Write the given content to the file path.
     json_to_xml(json_file_path, xml_file_path): Convert JSON data to XML and write to a file.
 """
-import json
-from dicttoxml import dicttoxml
-from xml.dom.minidom import parseString
-
-# File paths
-raw_json_file = 'webApp/debugger/raw.json'
-api_response_json_file = 'webApp/debugger/output/api_response.json'
-api_response_xml_file = 'webApp/debugger/output/api_response.xml'
-
 # Function to load JSON data from a file
 def load_json_file(file_path):
     try:
@@ -66,17 +60,32 @@ def json_to_xml(json_file_path, xml_file_path):
     except Exception as e:
         return f"An error occurred in the conversion: {e}"
 
+# Function to process JSON and XML conversion for a given set of files
+def process_json_and_xml(json_input_file, json_output_file, xml_output_file):
+    response = load_json_file(json_input_file)
+    if isinstance(response, str):
+        print(response)
+    else:
+        formatted_response = format_json_response(response)
+        result = write_to_file(json_output_file, formatted_response)
+        print(result)
 
+        # Convert JSON to XML and write
+        result_xml = json_to_xml(json_output_file, xml_output_file)
+        print(result_xml)
 
-# Load, format and write JSON
-response = load_json_file(raw_json_file)
-if isinstance(response, str):
-    print(response)
-else:
-    formatted_response = format_json_response(response)
-    result = write_to_file(api_response_json_file, formatted_response)
-    print(result)
+# File paths for the first JSON/XML pair
+raw_send_json_file = 'webApp/debugger/raw.json'
+api_send_json_file = 'webApp/debugger/output/api_send.json'
+api_send_xml_file = 'webApp/debugger/output/api_send.xml'
 
-    # Convert JSON to XML and write
-    result_xml = json_to_xml(api_response_json_file, api_response_xml_file)
-    print(result_xml)
+# File paths for the second JSON/XML pair
+raw_response_json_file = 'webApp/debugger/raw_response.json'
+api_response_json_file = 'webApp/debugger/output/api_response.json'
+api_response_xml_file = 'webApp/debugger/output/api_response.xml'
+
+# Process the first JSON/XML pair
+process_json_and_xml(raw_send_json_file, api_send_json_file, api_send_xml_file)
+
+# Process the second JSON/XML pair
+process_json_and_xml(raw_response_json_file, api_response_json_file, api_response_xml_file)
