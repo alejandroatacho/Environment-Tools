@@ -1,6 +1,3 @@
-import json
-from dicttoxml import dicttoxml
-from xml.dom.minidom import parseString
 """ @Hinamizawa
 This module provides utility functions to load, format, and convert JSON data to XML.
 
@@ -19,6 +16,15 @@ Functions:
     write_to_file(file_path, content): Write the given content to the file path.
     json_to_xml(json_file_path, xml_file_path): Convert JSON data to XML and write to a file.
 """
+import json
+from dicttoxml import dicttoxml
+from xml.dom.minidom import parseString
+""" @Hinamizawa url:https://github.com/alejandroatacho/Environment-Tools/blob/main/tools/scripts/cleanerAIO.py"""
+#____________________________________________________________________________
+#Hinamizawa User Variables                                                  |
+debugMode = 0 #0 = single file debug, 1 = whole workflow debug cleaner      |
+#___________________________________________________________________________|
+
 # Function to load JSON data from a file
 def load_json_file(file_path):
     try:
@@ -74,18 +80,45 @@ def process_json_and_xml(json_input_file, json_output_file, xml_output_file):
         result_xml = json_to_xml(json_output_file, xml_output_file)
         print(result_xml)
 
-# File paths for the first JSON/XML pair
-raw_send_json_file = 'webApp/debugger/raw.json'
-api_send_json_file = 'webApp/debugger/output/api_send.json'
-api_send_xml_file = 'webApp/debugger/output/api_send.xml'
+if debugMode == 0:
+    singleDebugRaw_file = 'webApp/debugger/singleDebug/singleDebugRaw.json'
+    singleDebugResponse_file = 'webApp/debugger/singleDebug/singleDebugResponse.json'
+    singleDebugResponse_xml_file = 'webApp/debugger/singleDebug/singleDebugResponse.xml'
+    process_json_and_xml(singleDebugRaw_file, singleDebugResponse_file, singleDebugResponse_xml_file)
 
-# File paths for the second JSON/XML pair
-raw_response_json_file = 'webApp/debugger/raw_response.json'
-api_response_json_file = 'webApp/debugger/output/api_response.json'
-api_response_xml_file = 'webApp/debugger/output/api_response.xml'
+elif debugMode == 1:
+    # File paths and processing for setup send
+    raw_send_json_setup_file = 'webApp/debugger/input/raw_send_setup.json'
+    api_send_json_setup_file = 'webApp/debugger/output/api_send_setup.json'
+    api_send_xml_setup_file = 'webApp/debugger/output/api_send_setup.xml'
+    process_json_and_xml(raw_send_json_setup_file, api_send_json_setup_file, api_send_xml_setup_file)
 
-# Process the first JSON/XML pair
-process_json_and_xml(raw_send_json_file, api_send_json_file, api_send_xml_file)
+    # File paths and processing for setup response
+    raw_response_json_setup_file = 'webApp/debugger/input/raw_setup_response.json'
+    api_response_json_setup_file = 'webApp/debugger/output/api_setup_response.json'
+    api_response_xml_setup_file = 'webApp/debugger/output/api_setup_response.xml'
+    process_json_and_xml(raw_response_json_setup_file, api_response_json_setup_file, api_response_xml_setup_file)
 
-# Process the second JSON/XML pair
-process_json_and_xml(raw_response_json_file, api_response_json_file, api_response_xml_file)
+    # File paths and processing for enrollment send
+    raw_send_json_enrollment_file = 'webApp/debugger/input/raw_enrollment_send.json'
+    api_send_json_enrollment_file = 'webApp/debugger/output/raw_enrollment_send.json'
+    api_send_xml_enrollment_file = 'webApp/debugger/output/raw_enrollment_send.xml'
+    process_json_and_xml(raw_send_json_enrollment_file, api_send_json_enrollment_file, api_send_xml_enrollment_file)
+
+    # File paths and processing for enrollment response
+    raw_response_json_enrollment_file = 'webApp/debugger/input/raw_enrollment_response.json'
+    api_response_json_enrollment_file = 'webApp/debugger/output/raw_enrollment_response.json'
+    api_response_xml_enrollment_file = 'webApp/debugger/output/raw_enrollment_response.xml'
+    process_json_and_xml(raw_response_json_enrollment_file, api_response_json_enrollment_file, api_response_xml_enrollment_file)
+
+    # File paths and processing for auth send
+    raw_send_json_auth_file = 'webApp/debugger/input/raw_auth_send.json'
+    api_send_json_auth_file = 'webApp/debugger/output/api_auth_send.json'
+    api_send_xml_auth_file = 'webApp/debugger/output/api_auth_send.xml'
+    process_json_and_xml(raw_send_json_auth_file, api_send_json_auth_file, api_send_xml_auth_file)
+
+    # File paths and processing for auth response
+    raw_response_json_auth_file = 'webApp/debugger/input/raw_auth_response.json'
+    api_response_json_auth_file = 'webApp/debugger/output/api_auth_response.json'
+    api_response_xml_auth_file = 'webApp/debugger/output/api_auth_response.xml'
+    process_json_and_xml(raw_response_json_auth_file, api_response_json_auth_file, api_response_xml_auth_file)
